@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:eloquente_women/screens/onboarding_screen.dart';
 
 void main() {
@@ -11,7 +10,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );
@@ -19,6 +18,8 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -62,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   buttonText: _images[index][3],
                   onTap: () {
                     controller.nextPage(
-                        duration: Duration(milliseconds: 300),
+                        duration: const Duration(milliseconds: 300),
                         curve: Curves.easeIn);
                   },
                 );
